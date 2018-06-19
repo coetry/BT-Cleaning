@@ -1,7 +1,13 @@
 /* General */
 /* NavBar */
+body {
+  background-color: #7cefd1;
+}
 .bt-navbar {
   background: #7cefd1;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
 }
 .bt-navbar .bt-brand {
   color: #000;
@@ -15,6 +21,39 @@
 .bt-navbar ul li {
   margin-right: 15px;
 }
-body {
-  background-color: #7cefd1;
+.bt-navbar ul li a {
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+}
+.bt-hero-container {
+  padding: 0;
+}
+.hero-bg {
+  background-image: url('../images/downtown_beaumont.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.scent-options {
+  display: flex;
+  justify-content: space-between;
+}
+.scent-options .scent-option {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scent-options .scent-option .scent-option-img-container {
+  width: 100%;
+}
+.scent-options .scent-option .scent-option-img-container img {
+  width: 100%;
+}
+.scent-options .scent-option .scent-option-name {
+  font-weight: bold;
 }

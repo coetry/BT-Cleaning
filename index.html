@@ -13,32 +13,57 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        
-        <nav class="navbar bt-navbar">
-            <a class="navbar-brand bt-brand" href="#">B&T Cleaning</a>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+        <div class="container-fluid bt-hero-container">
+            <nav class="navbar bt-navbar">
+                <a class="navbar-brand bt-brand" href="#">B&T Cleaning</a>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero-bg"></div>
+        </div>
+             
 
         <div id="#about" class="container">
             <h1>About</h1>
             <p>Our cleaning service uniquely cleans to the desire of our customers. What make our cleaning services
                 unique? Our cleaning services allow customers to choose the products of their personal choice. That’s
                 right! Customers can choose the products of their desire for cleaning, whether natural or non-natural
-                products.</p>
+                products.
+            </p>
         </div>
 
-        <div class="container">
+        <div class="container scent-options-container">
             <h1>Natural Product Scent Options</h1>
-            <ul>
-                <li>Lavender</li>
-                <li>Citrus</li>
-                <li>Lemon</li>
-                <li>Fresh Crisp</li>
-            </ul>
+            <div class="scent-options">
+                <div class="scent-option">
+                    <div class="scent-option-img-container">
+                        <img src="images/lavender.png" alt="lavender" />
+                    </div>
+                    <div class="scent-option-name">Lavender</div>
+                </div>
+                <div class="scent-option">
+                    <div class="scent-option-img-container">
+                        <img src="images/citrus.png" alt="citrus" />
+                    </div>
+                    <div class="scent-option-name">Citrus</div>
+                </div>
+                <div class="scent-option">
+                    <div class="scent-option-img-container">
+                        <img src="images/lemon.png" alt="lemon" />
+                    </div>
+                    <div class="scent-option-name">Lemon</div>
+                </div>
+                <div class="scent-option">
+                    <div class="scent-option-img-container">
+                        <img src="images/fresh_crisp.png" alt="fresh crisp" />
+                    </div>
+                    <div class="scent-option-name">Fresh Crisp</div>
+                </div>
+            </div>
         </div>
 
         <div id="#services" class="container">
@@ -54,9 +79,14 @@
         <div id="#contact" class="container">
             <h1>Contact</h1>
         </div>
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            const about = document.getElementById("#about")
+            about.scrollIntoView(true)
+            console.log(about)
+        </script>
     </body>
 </html>
