@@ -1,12 +1,19 @@
 /* General */
 /* NavBar */
 .bt-navbar {
-  background: #fff;
+  background: #7cefd1;
 }
-.bt-brand {
+.bt-navbar .bt-brand {
   color: #000;
   border: 2px solid black;
   padding: 10px;
+}
+.bt-navbar ul {
+  list-style: none;
+  display: flex;
+}
+.bt-navbar ul li {
+  margin-right: 15px;
 }
 body {
   background-color: #7cefd1;
