@@ -8,11 +8,16 @@ body {
   align-items: center;
   position: fixed;
   width: 100vw;
+  z-index: 3000;
 }
 .bt-navbar .bt-brand {
   color: #000;
   border: 2px solid black;
   padding: 10px;
+}
+.bt-navbar .bt-brand:hover {
+  color: #7cefd1;
+  background-color: black;
 }
 .bt-navbar ul {
   list-style: none;
@@ -26,14 +31,33 @@ body {
   border: 2px solid black;
   padding: 10px;
 }
+.bt-navbar ul li a:hover {
+  background-color: black;
+  color: #7cefd1;
+}
 .bt-hero-container {
   padding: 0;
 }
-.hero-bg {
+.bt-hero-container .hero-bg {
   background-image: url('../images/downtown_beaumont.jpg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.bt-hero-container .hero-bg .mission-statement {
+  margin-left: 30px;
+  position: absolute;
+  background-color: black;
+  padding: 10px;
+  color: #7cefd1;
+}
+.about-container {
+  margin-top: 50px;
+}
+.scent-options-container {
+  margin-top: 50px;
 }
 .scent-options {
   display: flex;
@@ -56,4 +80,7 @@ body {
 }
 .scent-options .scent-option .scent-option-name {
   font-weight: bold;
+}
+.services-container {
+  margin-top: 50px;
 }
