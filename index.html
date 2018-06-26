@@ -30,7 +30,7 @@
         </div>
              
 
-        <div id="#about" class="container about-container">
+        <div id="about" class="container about-container">
             <h1>About</h1>
             <p>Our cleaning service uniquely cleans to the desire of our customers. What make our cleaning services
                 unique? Our cleaning services allow customers to choose the products of their personal choice. That’s
@@ -44,7 +44,7 @@
             <div class="scent-options">
                 <div class="scent-option">
                     <div class="scent-option-img-container">
-                        <img src="images/lavender.png" alt="lavender" />
+                        <img id="animating-img" src="images/lavender.png" alt="lavender" />
                     </div>
                     <div class="scent-option-name">Lavender</div>
                 </div>
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div id="#services" class="container services-container">
+        <div id="services" class="container services-container">
             <h1>Services</h1>
             <ul>
                 <li>Residential Cleaning</li>
@@ -79,23 +79,34 @@
             </ul>
         </div>
 
-        <div id="#contact" class="container contact-container">
+        <div id="contact" class="container contact-container">
             <h1>Contact</h1>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
         <script type="text/javascript">
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+          const img = document.getElementById('animating-img')
+         
+          
+          const changeImg = time => {
+            if(img.src.includes('lavender')){
+              img.setAttribute('src', 'images/citrus.png')
+              console.log(Date.now(), 'src:', img.src)
+              return
+            }
+            if(img.src.includes('citrus')){
+              img.setAttribute('src', 'images/lavender.png')
+              console.log(Date.now(), 'src:', img.src)
+              return
+            }
+          }
 
-                    document.querySelector(this.hash).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                 });
-            });
+          TweenLite.ticker.fps(3)
+          TweenLite.ticker.addEventListener("tick", changeImg)
+
         </script>
     </body>
 </html>
