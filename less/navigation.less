@@ -25,22 +25,30 @@
         }
     }
 
-    ul {
-        list-style: none;
-        display: flex;
+    .bt-navbar-nav {
+        
+        flex-direction: row;
         
         li{ 
             margin-right: 15px;
-            a {
+            .nav-link, .nav-link:not([href]) {
                 color: black;
                 border: 2px solid black;
                 padding: 10px;
+                text-decoration: none;
 
                 &:hover{
                     background-color: black;
                     color: @mint-green;
                 }
             }
+            .nav-link:not([href]) {
+              cursor: pointer;
+            }
+            .active {
+              background-color: black;
+              color: @mint-green;
+            } 
         }
     }
 }

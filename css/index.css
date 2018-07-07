@@ -45,19 +45,28 @@ p {
   color: #7cefd1;
   background-color: black;
 }
-.bt-navbar ul {
-  list-style: none;
-  display: flex;
+.bt-navbar .bt-navbar-nav {
+  flex-direction: row;
 }
-.bt-navbar ul li {
+.bt-navbar .bt-navbar-nav li {
   margin-right: 15px;
 }
-.bt-navbar ul li a {
+.bt-navbar .bt-navbar-nav li .nav-link,
+.bt-navbar .bt-navbar-nav li .nav-link:not([href]) {
   color: black;
   border: 2px solid black;
   padding: 10px;
+  text-decoration: none;
 }
-.bt-navbar ul li a:hover {
+.bt-navbar .bt-navbar-nav li .nav-link:hover,
+.bt-navbar .bt-navbar-nav li .nav-link:not([href]):hover {
+  background-color: black;
+  color: #7cefd1;
+}
+.bt-navbar .bt-navbar-nav li .nav-link:not([href]) {
+  cursor: pointer;
+}
+.bt-navbar .bt-navbar-nav li .active {
   background-color: black;
   color: #7cefd1;
 }
