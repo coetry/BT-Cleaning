@@ -4,11 +4,20 @@
     position: fixed;
     width: 100vw;
     z-index: 3000;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,1);
+
+    @media(max-width: 515px) {
+      flex-direction: column;
+    }
 
     .bt-brand {
         color: #000;
         border: 2px solid black;
         padding: 10px;
+
+        @media(max-width: 515px){
+          margin-bottom: 15px;
+        }
 
         &:hover {
             color: @mint-green;

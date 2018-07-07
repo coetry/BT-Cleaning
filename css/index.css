@@ -3,17 +3,43 @@
 body {
   background-color: #7cefd1;
 }
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+p {
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
 .bt-navbar {
   background: #7cefd1;
   align-items: center;
   position: fixed;
   width: 100vw;
   z-index: 3000;
+  box-shadow: 0 2px 2px -2px #000000;
+}
+@media (max-width: 515px) {
+  .bt-navbar {
+    flex-direction: column;
+  }
 }
 .bt-navbar .bt-brand {
   color: #000;
   border: 2px solid black;
   padding: 10px;
+}
+@media (max-width: 515px) {
+  .bt-navbar .bt-brand {
+    margin-bottom: 15px;
+  }
 }
 .bt-navbar .bt-brand:hover {
   color: #7cefd1;
@@ -37,31 +63,24 @@ body {
 }
 .bt-hero-container {
   padding: 0;
-}
-.bt-hero-container .hero-bg {
-  background-image: url('../images/downtown_beaumont.jpg');
-  background-size: cover;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
 }
-.bt-hero-container .hero-bg .mission-statement {
-  margin-left: 30px;
-  position: absolute;
-  background-color: black;
-  padding: 10px;
-  color: #7cefd1;
+.bt-hero-container #animating-logo {
+  align-self: center;
 }
-.about-container {
-  margin-top: 50px;
+.bt-hero-container .mission-statement {
+  align-self: center;
+  text-align: center;
 }
 .scent-options-container {
   margin-top: 50px;
 }
+.scent-options-container h1 {
+  margin-bottom: 5rem;
+}
 .scent-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .scent-options .scent-option {
   width: 200px;
@@ -71,6 +90,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px 0;
 }
 .scent-options .scent-option .scent-option-img-container {
   width: 100%;
@@ -82,5 +102,5 @@ body {
   font-weight: bold;
 }
 .services-container {
-  margin-top: 50px;
+  height: 500px;
 }
