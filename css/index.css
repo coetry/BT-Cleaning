@@ -76,6 +76,12 @@ p {
 }
 .bt-hero-container #animating-logo {
   align-self: center;
+  width: 600px;
+}
+@media (max-width: 450px) {
+  .bt-hero-container #animating-logo {
+    width: 400px;
+  }
 }
 .bt-hero-container .mission-statement {
   align-self: center;
