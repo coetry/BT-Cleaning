@@ -78,7 +78,7 @@ p {
   align-self: center;
   width: 600px;
 }
-@media (max-width: 450px) {
+@media (max-width: 581px) {
   .bt-hero-container #animating-logo {
     width: 400px;
   }
