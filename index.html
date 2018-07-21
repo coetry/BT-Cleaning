@@ -8,12 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/index.css">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Diamonds are forever';
+      src: url('fonts/diamonds_are_forever.ttf') format('truetype');
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".bt-navbar" data-offset="210">
 
   <nav id="bt-navbar" class="navbar bt-navbar">
-    <a class="navbar-brand bt-brand" href="#">B&T Cleaning</a>
+    <a class="navbar-brand bt-brand" href="#">
+      <img src="images/bt_cleaning_diamond_logo.png" width="150" />
+    </a>
     <ul class="navbar-nav bt-navbar-nav">
       <li class="nav-item"><a class="nav-link active" href="#mission">Mission</a></li>
       <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -23,7 +31,7 @@
   </nav>
 
   <section id="mission" class="container-fluid bt-hero-container">
-    <img id="animating-logo" src="images/bt_logo_big_sparkles.png" />
+    <img id="animating-logo" src="images/bt_cleaning_diamond_logo_sparkles.png" />
     <div class="mission-statement">
       <h1>Mission</h1>
       <p>To provide unique cleaning services to the Golden Triangle and surrounding areas.</p>
@@ -122,6 +130,7 @@
     })
 
     const img = document.getElementById('animating-logo')
+    console.log(img.src)
 
     const missionLink = document.querySelectorAll(".bt-navbar ul a")[0]
     const aboutLink = document.querySelectorAll(".bt-navbar ul a")[1]
@@ -138,18 +147,20 @@
 
 
     const changeImg = time => {
-      if (!img.src.includes('sparkles')) {
-        img.setAttribute('src', 'images/bt_logo_big_sparkles.png')
+      console.log(img)
+      if (img.src.includes('bt_cleaning_diamond_logo_sparkles.png')) {
+        img.setAttribute('src', 'images/bt_cleaning_diamond_logo.png')
+        console.log(img.src)
         return
-      }
-      if (img.src.includes('sparkles')) {
-        img.setAttribute('src', 'images/bt_logo_big.png')
+      } else if (!img.src.includes('bt_cleaning_diamond_logo_sparkles.png')) {
+        img.setAttribute('src', 'images/bt_cleaning_diamond_logo_sparkles.png')
+        console.log(img.src)
         return
       }
     }
 
-    TweenLite.ticker.fps(4)
-    TweenLite.ticker.addEventListener("tick", changeImg)
+     TweenLite.ticker.fps(3)
+     TweenLite.ticker.addEventListener("tick", changeImg)
   </script>
 </body>
 

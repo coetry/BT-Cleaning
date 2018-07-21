@@ -41,10 +41,6 @@ p {
     margin-bottom: 15px;
   }
 }
-.bt-navbar .bt-brand:hover {
-  color: #7cefd1;
-  background-color: black;
-}
 .bt-navbar .bt-navbar-nav {
   flex-direction: row;
 }
@@ -75,6 +71,7 @@ p {
   height: 100vh;
 }
 .bt-hero-container #animating-logo {
+  margin-top: 100px;
   align-self: center;
   width: 600px;
 }
@@ -84,6 +81,7 @@ p {
   }
 }
 .bt-hero-container .mission-statement {
+  margin-top: 40px;
   align-self: center;
   text-align: center;
 }
