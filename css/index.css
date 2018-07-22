@@ -18,6 +18,9 @@ p {
     line-height: 2rem;
   }
 }
+.ul {
+  text-decoration: underline;
+}
 .bt-navbar {
   background: #7cefd1;
   align-items: center;
@@ -116,4 +119,7 @@ p {
 }
 .services-container {
   height: 700px;
+}
+form {
+  margin-top: 30px;
 }
