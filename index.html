@@ -8,12 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/index.css">
-  <style type="text/css">
-    @font-face {
-      font-family: 'Diamonds are forever';
-      src: url('fonts/diamonds_are_forever.ttf') format('truetype');
-    }
-  </style>
 </head>
 
 <body data-spy="scroll" data-target=".bt-navbar" data-offset="210">
@@ -31,7 +25,7 @@
   </nav>
 
   <section id="mission" class="container-fluid bt-hero-container">
-    <img id="animating-logo" src="images/bt_cleaning_diamond_logo_sparkles.png" />
+    <img id="animating-logo" src="images/bt_cleaning_diamond_logo.png" />
     <div class="mission-statement">
       <h1>Mission</h1>
       <p>To provide <span class="ul">unique</span> and <span class="ul">satisfying</span> cleaning services to the Golden Triangle and surrounding areas.</p>
@@ -120,49 +114,52 @@
     <h1>Contact</h1>
     <small>Prices are given upon consultation of the service. A deposit of $50.00 will be required to hold appointment</small>
     <form action="https://formspree.io/bethanylandry@yahoo.com" method="POST">
-     <div class="form-group">
+      <div class="form-group">
         <label for="name">Name:</label>
         <input class="form-control" id="name" type="text" name="name" />
-     </div>
-     <div class="form-group">
-       <label for="address">Address:</label>
-       <input class="form-control" id="address" type="text" name="address" />
-     </div>
-     <div class="form-group">
-       <label for="city-state-zip">City, State, Zip code:</label>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input class="form-control" id="address" type="text" name="address" />
+      </div>
+      <div class="form-group">
+        <label for="city-state-zip">City, State, Zip code:</label>
         <input class="form-control" id="city-state-zip" type="text" name="city-state-zip" />
-     </div>
-     <div class="form-group">
-       <label for="phone">Phone Number:</label>
-       <input class="form-control" id="phone" type="text" name="phone" />
-     </div>
-     <div class="form-group">
-       <label for="service">Service:</label>
-       <input class="form-control" id="service" type="text" name="service" />
-       <button type="submit">Submit</button>
-     </div>
-     <small> B&T CLeaning Services, LLC will give a call back within 24 hours of request </small>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input class="form-control" id="phone" type="text" name="phone" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" type="text" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="service">Service:</label>
+        <input class="form-control" id="service" type="text" name="service" />
+        <button type="submit">Submit</button>
+      </div>
+      <small> B&T CLeaning Services, LLC will give a call back within 24 hours of request </small>
     </form>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="9N2822BXTSPCU">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
+    <div id="paypal-button-container"></div>
   </section>
+
+  <footer>
+    <span>2018 - B&T Cleaning Services, LLC</span>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" defer></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   <script type="text/javascript">
     window.addEventListener('scroll', e => {
       console.log(window.pageYOffset)
     })
 
     const img = document.getElementById('animating-logo')
-    console.log(img.src)
 
     const missionLink = document.querySelectorAll(".bt-navbar ul a")[0]
     const aboutLink = document.querySelectorAll(".bt-navbar ul a")[1]
@@ -174,7 +171,7 @@
 
     aboutLink.onclick = e => {
       e.preventDefault()
-      window.scroll(0, 450)
+      window.scroll(0, 460)
     }
 
 
@@ -191,8 +188,65 @@
       }
     }
 
-     TweenLite.ticker.fps(3)
-     TweenLite.ticker.addEventListener("tick", changeImg)
+    function changeOpacity() {
+      if (img.style.opacity === 1) {
+        img.style.opacity = 0
+      } else img.style.opacity = 1
+    }
+
+    //TweenLite.ticker.fps(3)
+    //TweenLite.ticker.addEventListener("tick", changeOpacity)
+    TweenMax.to(img, 0.7, {
+      opacity: 0,
+      repeat: -1,
+      yoyo: true
+    })
+  </script>
+  <script>
+    // Render the PayPal button
+
+    paypal.Button.render({
+
+      // Set your environment
+
+      env: 'sandbox', // sandbox | production
+
+      // Specify the style of the button
+
+      style: {
+        label: 'checkout',
+        size: 'medium', // small | medium | large | responsive
+        shape: 'rect', // pill | rect
+        color: 'black' // gold | blue | silver | black
+      },
+
+      // PayPal Client IDs - replace with your own
+      // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+
+      client: {
+        sandbox: 'ASCwP9TYm6WfOESLSl8M2ipI2F9ImFZ_JUkwAmXB_h03WlAyDsnS6_qudRyl4amvNZlnP-NXsOwIEwSR'
+      },
+
+      payment: function(data, actions) {
+        return actions.payment.create({
+          payment: {
+            transactions: [{
+              amount: {
+                total: '50.00',
+                currency: 'USD'
+              }
+            }]
+          }
+        });
+      },
+
+      onAuthorize: function(data, actions) {
+        return actions.payment.execute().then(function() {
+          window.alert('Payment Complete!');
+        });
+      }
+
+    }, '#paypal-button-container');
   </script>
 </body>
 

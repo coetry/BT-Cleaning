@@ -1,3 +1,29 @@
+.contact-container {
+  margin-bottom: 50px;
+}
+
 form {
   margin-top: 30px;
+  @media(min-width: 800px){
+    width: 50%;
+  }
+  
+  input[type="text"], input[type="text"]:focus {
+    background: #000;
+    border-radius: 0;
+    border: none;
+    color: #7cefd1;
+  }
+
+  button {
+    margin-top: 20px;
+    background: #000;
+    color: #7cefd1;
+    border: 1px solid black;
+    padding: 7px;
+  }
+}
+
+#paypal-button-container {
+  margin: 20px 0;
 }

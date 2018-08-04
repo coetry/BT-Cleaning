@@ -76,11 +76,12 @@ p {
 .bt-hero-container #animating-logo {
   margin-top: 100px;
   align-self: center;
-  width: 600px;
+  width: 1000px;
 }
 @media (max-width: 581px) {
   .bt-hero-container #animating-logo {
     width: 400px;
+    margin-left: 30px;
   }
 }
 .bt-hero-container .mission-statement {
@@ -120,6 +121,58 @@ p {
 .services-container {
   height: 700px;
 }
+.services-container h1 {
+  margin-left: 20px;
+}
+.services-container p {
+  font-size: 1.2rem;
+}
+@media (max-width: 581px) {
+  .services-container p {
+    font-size: 1rem;
+  }
+}
+.contact-container {
+  margin-bottom: 50px;
+}
 form {
   margin-top: 30px;
+}
+@media (min-width: 800px) {
+  form {
+    width: 50%;
+  }
+}
+form input[type="text"],
+form input[type="text"]:focus {
+  background: #000;
+  border-radius: 0;
+  border: none;
+  color: #7cefd1;
+}
+form button {
+  margin-top: 20px;
+  background: #000;
+  color: #7cefd1;
+  border: 1px solid black;
+  padding: 7px;
+}
+#paypal-button-container {
+  margin: 20px 0;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  background: #000;
+  color: #7cefd1;
+}
+footer span {
+  margin-right: 30px;
+}
+@media (max-width: 581px) {
+  footer {
+    justify-content: center;
+  }
 }
