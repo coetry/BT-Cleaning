@@ -62,6 +62,12 @@ p {
   background-color: black;
   color: #7cefd1;
 }
+@media (max-width: 400px) {
+  .bt-navbar .bt-navbar-nav li .nav-link,
+  .bt-navbar .bt-navbar-nav li .nav-link:not([href]) {
+    font-size: 0.7rem;
+  }
+}
 .bt-navbar .bt-navbar-nav li .nav-link:not([href]) {
   cursor: pointer;
 }
@@ -78,16 +84,47 @@ p {
   align-self: center;
   width: 1000px;
 }
-@media (max-width: 581px) {
+@media (max-width: 1000px) {
+  .bt-hero-container #animating-logo {
+    width: 850px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .bt-hero-container #animating-logo {
+    width: 750px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .bt-hero-container #animating-logo {
+    width: 650px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .bt-hero-container #animating-logo {
+    width: 550px;
+  }
+}
+@media (max-width: 500px) {
+  .bt-hero-container #animating-logo {
+    width: 450px;
+  }
+}
+@media (max-width: 450px) {
   .bt-hero-container #animating-logo {
     width: 400px;
-    margin-left: 30px;
+  }
+}
+@media (max-width: 350px) {
+  .bt-hero-container #animating-logo {
+    width: 300px;
   }
 }
 .bt-hero-container .mission-statement {
   margin-top: 40px;
   align-self: center;
-  text-align: center;
 }
 .scent-options-container {
   margin-top: 50px;
